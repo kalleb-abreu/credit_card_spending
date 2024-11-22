@@ -1,4 +1,4 @@
-"id","mes","ano","safra_abertura","cidade","estado","idade","sexo","total_valor","n_transactions"
+"id","mes","ano","safra_abertura","cidade","estado","idade","sexo","gasto_mensal","transacoes_mensais"
 "0001","04","2019","201405","CAMPO LIMPO PAULISTA  ","SP ",37,"F",274.75,4
 "0001","05","2019","201405","CAMPO LIMPO PAULISTA  ","SP ",37,"F",449.81,8
 "0001","06","2019","201405","CAMPO LIMPO PAULISTA  ","SP ",37,"F",482.17,10

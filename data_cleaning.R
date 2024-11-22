@@ -8,7 +8,8 @@ if (!require("dplyr")) {
 df <- read.csv("data/dataset.csv", sep = ";", dec = ",")
 
 unwanted_cols <- c("limite_total", "limite_disp", "grupo_estabelecimento", 
-                  "cidade_estabelecimento", "pais_estabelecimento")
+                  "cidade_estabelecimento", "pais_estabelecimento", 
+                  "safra_abertura")
 df <- df[!names(df) %in% unwanted_cols]
 
 unique_ids <- unique(df$id)
@@ -38,8 +39,8 @@ df_grouped <- df %>%
     estado = names(sort(table(estado), decreasing = TRUE))[1],
     idade = as.integer(names(sort(table(idade), decreasing = TRUE))[1]),
     sexo = names(sort(table(sexo), decreasing = TRUE))[1],
-    total_valor = sum(valor, na.rm = TRUE),
-    n_transactions = sum(!is.na(valor)),
+    gasto_mensal = sum(valor, na.rm = TRUE),
+    transacoes_mensais = sum(!is.na(valor)),
     .groups = 'drop'
   ) %>%
   arrange(id, ano, mes)
